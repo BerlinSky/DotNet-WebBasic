@@ -5,11 +5,11 @@ A tiny implemtation of the target system that performsa small end-to-end functio
 ## Key Concepts                      
                                      
 1. Entity Framework                  
-2. Clean Architecture                
-3. DotNet CLI                        
-                                     
-## Using the dotnet Cli                                       
-                                                              
+2. Clean Architecture                   
+3. DotNet CLI                           
+                                        
+## Using the dotnet Cli                                                                                                   
+                                                                                                                          
 ```bash                                                                                                                   
 > dotnet --version                                                                                                        
 > dotnet --info                                                                                                           
@@ -20,7 +20,7 @@ A tiny implemtation of the target system that performsa small end-to-end functio
 # create projects                                                                                                         
 > dotnet new classlib -n Domain                                                                                           
 > dotnet new classlib -n Application                                                                                      
-> dotnet new classlib -n Persistence      
+> dotnet new classlib -n Persistence                                                                                      
 > dotnet new webapi -n API                                                                                                
 ```                                                                                                                         
                                                                                                                             
