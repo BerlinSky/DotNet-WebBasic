@@ -10,18 +10,18 @@ A tiny implemtation of the target system that performsa small end-to-end functio
                                      
 ## Using the dotnet Cli                                       
                                                               
-```bash                                                       
-  > dotnet --version                                          
-  > dotnet --info                                             
-                                                              
-  # create a new solution                                     
-  > dotnet new sln                                            
-                                                              
-  # create projects                                           
-  > dotnet new classlib -n Domain                             
-  > dotnet new classlib -n Application                        
-  > dotnet new classlib -n Persistence                                                                                      
-  > dotnet new webapi -n API                                                                                                
+```bash                                                                                                                   
+> dotnet --version                                                                                                        
+> dotnet --info                                                                                                           
+                                                                                                                          
+# create a new solution                                                                                                   
+> dotnet new sln                                                                                                          
+                                                                                                                          
+# create projects                                                                                                         
+> dotnet new classlib -n Domain                                                                                           
+> dotnet new classlib -n Application                                                                                      
+> dotnet new classlib -n Persistence      
+> dotnet new webapi -n API                                                                                                
 ```                                                                                                                         
                                                                                                                             
 ## Notes                                                                                                                    
