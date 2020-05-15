@@ -36,7 +36,7 @@ A tiny implemtation of the target system that performsa small end-to-end functio
 ## Creating a Domain Entity              
                                          
 ```c#                                    
-// Inside Persistence project            
+// Inside Domain project            
 public class Value                       
 {                                        
     public int Id { get; set; }              
