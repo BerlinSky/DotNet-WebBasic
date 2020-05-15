@@ -4,10 +4,11 @@ A tiny implemtation of the target system that performsa small end-to-end functio
                                      
 ## Key Concepts                      
                                      
-1. Entity Framework                  
+1. Entity Framework: Convention-based                  
 2. Clean Architecture                   
-3. DotNet CLI                           
-                                        
+3. DotNet CLI                        
+4. Code-First approach to create database                                  
+                                         
 ## Using the dotnet Cli                                                                                                   
                                                                                                                           
 ```bash                                                                                                                   
@@ -20,8 +21,8 @@ A tiny implemtation of the target system that performsa small end-to-end functio
 # create projects                                                                                                         
 > dotnet new classlib -n Domain                                                                                           
 > dotnet new classlib -n Application                                                                                      
-> dotnet new classlib -n Persistence                                                                                      
-> dotnet new webapi -n API                                                                                                
+> dotnet new classlib -n Persistence                                                                                        
+> dotnet new webapi -n API                                                                                                  
 ```                                                                                                                         
                                                                                                                             
 ## Notes                                                                                                                    
@@ -30,4 +31,15 @@ A tiny implemtation of the target system that performsa small end-to-end functio
                                                                                                                             
 1. Comment out "app.UseHttpsRedirection()" from API/Startup.cs                                                              
                                                                                                                             
-2. Remove "https" endpoint from API/Properties/launchSettings.json                                                          
+2. Remove "https" endpoint from API/Properties/launchSettings.json    
+                                         
+## Creating a Domain Entity              
+                                         
+```c#                                    
+// Inside Persistence project            
+public class Value                       
+{                                        
+    public int Id { get; set; }              
+    public string Name { get; set; }              
+}                                        
+```                                      
