@@ -49,4 +49,18 @@ public class Value
 Add DataContext class under Persistence                 
 Add Entity Framework with Nuget package manager         
 Execute a series of tedious steps to add nuget packages 
-
+                                                        
+## Entity Framework: First Migration                            
+                                                                
+```bash                                                         
+# Install .Net Entity Framework                                                
+> dotnet tool install --local dotnet-ef --version 3.0.0         
+                                                                
+# Verify the installation                                       
+> dotnet ef                                                     
+                                                                
+# Create a first migration                                      
+> dotnet ef migrations add InitialCreate -p Persistence/ -s API/
+```                                                             
+                                                                
+                                                                
