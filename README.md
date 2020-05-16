@@ -81,5 +81,13 @@ Add an override method inside Persistence/DataContext.cs
 ```bash                                                      
 > dotnet ef migrations add SeedValues -p Persistence/ -s API/
 ```                                                          
-                                               
-Use SQLite Explorer to view the data seeded 
+                                                
+Use SQLite Explorer to view the data seeded     
+                                                
+## Use Dependency Injection                     
+                                                
+Add a constructor for API/ValuesController      
+Update ActionResult (2) methods to make it async
+                              
+## Use postman to test the API
+                                                
