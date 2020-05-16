@@ -63,4 +63,13 @@ Execute a series of tedious steps to add nuget packages
 > dotnet ef migrations add InitialCreate -p Persistence/ -s API/
 ```                                                             
                                                                 
-                                                                
+## Create the database                        
+                                              
+Update the Main() method in API/Program.cs    
+                                              
+```bash                                       
+> cd APT                                      
+> dotnet watch run                            
+```                                           
+                                              
+Use SQLite Explorer to view the tables created                                         
