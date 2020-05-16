@@ -32,14 +32,21 @@ A tiny implemtation of the target system that performsa small end-to-end functio
 1. Comment out "app.UseHttpsRedirection()" from API/Startup.cs                                                              
                                                                                                                             
 2. Remove "https" endpoint from API/Properties/launchSettings.json    
-                                         
-## Creating a Domain Entity              
-                                         
-```c#                                    
-// Inside Domain project            
-public class Value                       
-{                                        
-    public int Id { get; set; }              
-    public string Name { get; set; }              
-}                                        
-```                                      
+                                                                     
+## Creating a Domain Entity                                          
+                                                                     
+```c#                                                                
+// Inside Domain project                                             
+public class Value                                                   
+{                                                                    
+    public int Id { get; set; }                                      
+    public string Name { get; set; }                                 
+}                                                                    
+```                                                     
+                                                        
+## Creating DbContext and Service                       
+                                                        
+Add DataContext class under Persistence                 
+Add Entity Framework with Nuget package manager         
+Execute a series of tedious steps to add nuget packages 
+
