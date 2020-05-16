@@ -63,13 +63,23 @@ Execute a series of tedious steps to add nuget packages
 > dotnet ef migrations add InitialCreate -p Persistence/ -s API/
 ```                                                             
                                                                 
-## Create the database                        
-                                              
-Update the Main() method in API/Program.cs    
-                                              
-```bash                                       
-> cd APT                                      
-> dotnet watch run                            
-```                                           
-                                              
-Use SQLite Explorer to view the tables created                                         
+## Create the database                            
+                                                  
+Update the Main() method in API/Program.cs        
+                                                        
+```bash                                                 
+> cd APT                                                
+> dotnet watch run                                           
+```                                                          
+                                                             
+Use SQLite Explorer to view the tables created               
+                                                             
+## Seed data values                                          
+                                                             
+Add an override method inside Persistence/DataContext.cs     
+                                                             
+```bash                                                      
+> dotnet ef migrations add SeedValues -p Persistence/ -s API/
+```                                                          
+                                               
+Use SQLite Explorer to view the data seeded 
