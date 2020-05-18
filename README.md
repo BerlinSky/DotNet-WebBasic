@@ -109,10 +109,24 @@ Install React DevTools Chrom extension
                                                                      
 Convert App component to a react Class component (Client-App/App.tsx)
                                                                      
-## Using React state   
-                                                
+## Using React state                                                 
+                                                                     
 ```bash                                                              
 # Install axios                                                      
 > npm i -S axios                                                     
 ```                                                                  
                                                                      
+## CORS Support to API                                               
+                                                                     
+Add "Services.AddCors()" in API/Startup.cs                           
+Add "app.UseCors("CorsPolicy")                                       
+                                                                     
+Using Semantic UI React                                         
+                                                                
+```bash                                                         
+> npm i -S semantic-ui-react                                    
+```                                                             
+                                                                
+Add senantic UI css CDN link to the Client-App/public/index.html
+Update src/App.tsx to use semantic-ui header component with icon
+Utilize semantic ui List component
