@@ -88,6 +88,31 @@ Use SQLite Explorer to view the data seeded
                                                 
 Add a constructor for API/ValuesController      
 Update ActionResult (2) methods to make it async
-                              
-## Use postman to test the API
+                                                    
+## Use postman to test the API                      
+                                                    
+Install Postman client tool                         
+                                                    
+## Create a React App                               
+                                                    
+```bash                                             
+# Install the create-react Cli                      
+> npm use 12                                                         
+> npx create-react Clinet-App --use-npm --typescript                 
+> cd client-aap                                                      
+> npm start                                                          
+```                                                                  
+                                                                     
+Update title in the Index.html head                                  
+Add "experimentalDecorator": true to tyconfig.json                   
+Install React DevTools Chrom extension                               
+                                                                     
+Convert App component to a react Class component (Client-App/App.tsx)
+                                                                     
+## Using React state   
                                                 
+```bash                                                              
+# Install axios                                                      
+> npm i -S axios                                                     
+```                                                                  
+                                                                     
