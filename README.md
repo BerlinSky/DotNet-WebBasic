@@ -153,6 +153,13 @@ Updating API?program.cs: Seed.SeedData(Context)
 ## Create a Query Handler                                                                                
                                                                                                          
 1. Adding mediatr > MediateR.Extension.Microsoft > Package Manager > Latest Version into Application project
-2. Adding "Activities" folder to Applications/
-3. Adding List.cs to Activities folder
-                    
+2. Adding "Activities" folder to Applications/       
+3. Adding List.cs to Activities folder               
+                                                     
+## Create the Activities API Controller              
+                                                     
+1. Add the ActivitiesController.cs in API/Controllers
+2. Add Route attribute                       
+3. Add [HttpGet]                             
+4. Add Services.AddMediateR to API/Startup.cs
+     
