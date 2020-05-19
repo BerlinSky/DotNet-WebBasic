@@ -123,10 +123,36 @@ Add "app.UseCors("CorsPolicy")
                                                                      
 Using Semantic UI React                                         
                                                                 
-```bash                                                         
-> npm i -S semantic-ui-react                                    
-```                                                             
-                                                                
-Add senantic UI css CDN link to the Client-App/public/index.html
-Update src/App.tsx to use semantic-ui header component with icon
-Utilize semantic ui List component
+```bash                                                          
+> npm i -S semantic-ui-react                                     
+```                                                              
+                                                                 
+Add senantic UI css CDN link to the Client-App/public/index.html 
+Update src/App.tsx to use semantic-ui header component with icon       
+Utilize semantic ui List component                                     
+                                                                       
+## Add the Activity Entity                                             
+                                                                       
+Using a VS Code plug-in, C# Extensions, to add Domain/Activity.cs      
+Using Guid for Id type                                                 
+Adding DbSet in Persistence/DataContext.cs                             
+                                                                       
+```bash                                                                
+> dotnet ef migration add "ActivityEntiryAdded" -p Persistence/ -s API/
+```                                                                
+                                                                   
+Using VS Code Snippets                                             
+Adding the code sippets file to the "vscode" folder                                                      
+Using prefix in the code sippets file to bring in the code snippets                                      
+Updating API?program.cs: Seed.SeedData(Context)                                                          
+                                                                                                         
+## Understand CQRS - Commands and Queries                                                                
+                                                                                                         
+## MdeiatR and Clean Architecture                                                                        
+                                                                                                         
+## Create a Query Handler                                                                                
+                                                                                                         
+1. Adding mediatr > MediateR.Extension.Microsoft > Package Manager > Latest Version into Application project
+2. Adding "Activities" folder to Applications/
+3. Adding List.cs to Activities folder
+                    
