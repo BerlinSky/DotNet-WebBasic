@@ -188,4 +188,23 @@ Updating API?program.cs: Seed.SeedData(Context)
 1. Create VS Code User Snippets                            
 2. Create handlerSnippets.code-Snippets                    
 3. Use snippet-generator.app site to generate code snippets
-                                                   
+                                                           
+## Add a Edit Handler                                      
+                                                           
+1. Create Edit.cs in Applicaiton/Activities folder         
+                                                           
+    1.1. Use "chandler to invoke VS Code snippet                                 
+    1.2. Add Handler logic                                 
+                                                           
+2. Add [HttpPut] method in API/ActivitiesController        
+3. Test it with Postman                                    
+                                                           
+## Add a Delete Handler                                    
+                                                           
+1. Create Delete.cs in Applicaiton/Activities folder       
+                                                           
+    1.1. Use "chandler to invoke VS Code snippet                                 
+    1.2. Add Handler logic                                 
+                                                           
+2. Add [HttpDelete] method in API/ActivitiesController       
+3. Test it with Postman                                    
