@@ -5,8 +5,8 @@ A tiny implemtation of the target system that performsa small end-to-end functio
 ## Key Concepts                      
                                      
 1. Entity Framework: Convention-based                  
-2. Clean Architecture                   
-3. DotNet CLI                        
+2. Clean Architecture                    
+3. DotNet CLI                            
 4. Code-First approach to create database                                  
                                          
 ## Using the dotnet Cli                                                                                                   
@@ -159,7 +159,33 @@ Updating API?program.cs: Seed.SeedData(Context)
 ## Create the Activities API Controller              
                                                      
 1. Add the ActivitiesController.cs in API/Controllers
-2. Add Route attribute                       
-3. Add [HttpGet]                             
-4. Add Services.AddMediateR to API/Startup.cs
-     
+2. Add Route attribute                              
+3. Add [HttpGet]                                    
+4. Add Services.AddMediateR to API/Startup.cs       
+                                                    
+## Add the Detail Hander                            
+                                                    
+1. Create Detail.cs in Applicaiton/Activities folder
+                                                   
+    1.1. Add Query class                           
+    1.2. Add Handler class                         
+                                                   
+2. Add [HttpPut] method in API/ActivitiesController
+3. Test it with Postman                            
+                                                   
+## Add Create Handler                              
+                                                   
+1. Create Create.cs in Applicaiton/Activities folder
+                                                   
+    1.1. Add Command class                                 
+    1.2. Add Handler class                                 
+                                                           
+2. Add [HttpPost] method in API/ActivitiesController       
+3. Test it with Postman                                    
+                                                           
+## Manage the BoilerPlate Code                             
+                                                           
+1. Create VS Code User Snippets                            
+2. Create handlerSnippets.code-Snippets                    
+3. Use snippet-generator.app site to generate code snippets
+                                                   
