@@ -21,7 +21,7 @@ export const ActivityList: React.FC<IProps> = ({activities}) => {
               </Item.Description>                                      
             <Item.Extra>                                               
               <Button floated='right' content='View' color='blue' />
-              <Label basic content={activity.catgegory} />            
+              <Label basic content={activity.category} />            
             </Item.Extra>                                              
             </Item.Content>                                            
           </Item>                                                      
