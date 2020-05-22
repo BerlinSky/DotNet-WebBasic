@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Header, Icon, List } from 'semantic-ui-react';               
+import React, { useState, useEffect, Fragment } from 'react';
+import { List, Container } from 'semantic-ui-react';               
 import axios from 'axios';                                    
 import { IActivity } from '../models/activity';               
 import { NavBar } from '../../features/nav/NavBar';      
@@ -12,28 +12,23 @@ const App = () => {
       .then((response) => {                                   
         setActivities(response.data)                             
       })                                                      
-  }, []);                                                     
-                                                                 
-    return (                                                     
-      <div>                                                
-        <NavBar />                                         
-        {/* <Header as='h2' icon>                                    
-          <Icon name='users' />                                  
-          Reactivities                                           
-          <Header.Subheader>                                     
-            Manage your account settings and set e-mail preferences.
-          </Header.Subheader>                                    
-        </Header>                                                 */}
-        <List>                                                   
-          {activities.map((activity) => (                  
-            <List.Item key={activity.id}>                              
-              { activity.title }                                 
-            </List.Item>                                         
-          ))}                                                    
-        </List>                                                  
-      </div>                                                     
-    );                                                           
-}                                                                
-                                                                 
-export default App;                                              
-                                                                 
+  }, []);                                                         
+                                                                     
+    return (                                                         
+      <Fragment>                                                          
+        <NavBar />                         
+        <Container style={{marginTop: '7em'}}>
+          <List>                                                       
+            {activities.map((activity) => (                            
+              <List.Item key={activity.id}>                              
+                { activity.title }                                     
+              </List.Item>                                             
+            ))}                                                        
+          </List>                                                      
+        </Container>                       
+      </Fragment>                                                         
+    );                                                               
+}                                                                    
+                                                                     
+export default App;                                                  
+                                                                     
