@@ -1,49 +1,39 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header, Icon, List } from 'semantic-ui-react';               
-import axios from 'axios';                       
-import { IActivity } from '../models/activity';
-                                
-interface IState {              
-  activities: IActivity[]       
-}                                 
-                                        
-class App extends Component<{}, IState> {                    
-  readonly state: IState = {                                      
-    activities: []                      
-  }                                              
-                                                  
-  componentDidMount() {                           
+import axios from 'axios';                                    
+import { IActivity } from '../models/activity';               
+import { NavBar } from '../../features/nav/NavBar';      
+                                                              
+const App = () => {                                           
+  const [activities, setActivities] = useState<IActivity[]>([]);                                         
+                                                              
+  useEffect(() => {                                           
     axios.get<IActivity[]>('http://localhost:5000/api/activities/')
-      .then((response) => {                        
-        // console.log(response);                     
-                                                   
-        this.setState({                              
-          activities: response.data                                       
-        })                                              
-      })                                           
-  }                                                 
-                                                    
-  render() {                                        
-    return (                                        
-      <div>                                        
-        <Header as='h2' icon>                      
-          <Icon name='users' />                    
-          Reactivities                             
-          <Header.Subheader>                       
+      .then((response) => {                                   
+        setActivities(response.data)                             
+      })                                                      
+  }, []);                                                     
+                                                                 
+    return (                                                     
+      <div>                                                
+        <NavBar />                                         
+        {/* <Header as='h2' icon>                                    
+          <Icon name='users' />                                  
+          Reactivities                                           
+          <Header.Subheader>                                     
             Manage your account settings and set e-mail preferences.
-          </Header.Subheader>                      
-        </Header>                                  
-        <List>                                     
-          {this.state.activities.map((activity) => ( 
+          </Header.Subheader>                                    
+        </Header>                                                 */}
+        <List>                                                   
+          {activities.map((activity) => (                  
             <List.Item key={activity.id}>                              
-              { activity.title }                       
-            </List.Item>                              
-          ))}                                      
-        </List>                                    
-      </div>                                        
-    );                                              
-  }                                                 
-}                                                   
-                                                    
-export default App;                                 
-                                                    
+              { activity.title }                                 
+            </List.Item>                                         
+          ))}                                                    
+        </List>                                                  
+      </div>                                                     
+    );                                                           
+}                                                                
+                                                                 
+export default App;                                              
+                                                                 
