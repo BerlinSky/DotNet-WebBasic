@@ -201,10 +201,33 @@ Updating API?program.cs: Seed.SeedData(Context)
                                                            
 ## Add a Delete Handler                                    
                                                            
-1. Create Delete.cs in Applicaiton/Activities folder       
-                                                           
-    1.1. Use "chandler to invoke VS Code snippet                                 
-    1.2. Add Handler logic                                 
-                                                           
-2. Add [HttpDelete] method in API/ActivitiesController       
-3. Test it with Postman                                    
+1. Create Delete.cs in Applicaiton/Activities folder                                  
+                                                                                      
+    1.1. Use "chandler to invoke VS Code snippet                                      
+    1.2. Add Handler logic                                                            
+                                                                                      
+2. Add [HttpDelete] method in API/ActivitiesController                                
+3. Test it with Postman                                                               
+                                                                                      
+## React App Folder Structure                                                         
+                                                                                      
+### There are two recommended methods by [https://reactjs.org/docs/faq-structure.html]
+                                        
+1. By feature                                   
+2. By file types                                
+                                                
+### Add two folders to client-app/src           
+                                                
+1. app/                                         
+2. features                                     
+                                                
+## Get a list of activities from the API        
+                                                
+1. Update the endpoint in client-app/.../App.tsx
+2. Update state to activities                 
+                                              
+## Add an Activity interface                  
+                                              
+1. Add a new "models" folder in src/app folder
+2. Add "activity.ts" in the models folder
+3. Add IState in activity.ts
