@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import { List, Container } from 'semantic-ui-react';               
+import { Container } from 'semantic-ui-react';               
 import axios from 'axios';                                    
 import { IActivity } from '../models/activity';               
 import { NavBar } from '../../features/nav/NavBar';      
