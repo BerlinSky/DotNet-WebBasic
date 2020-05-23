@@ -14,11 +14,23 @@ const App = () => {
     setSelectedActivity(activities.filter(a => a.id === id)[0]);                   
   }                                                             
                                                                 
-  const handleOpenCreateFrom = () => {                          
-    setSelectedActivity(null);
-    setEditMode(true);
-  }                                                             
-                                                                                   
+  const handleOpenCreateFrom = () => {                                      
+    setSelectedActivity(null);                                              
+    setEditMode(true);                                                      
+  }                                                                         
+                                                                            
+  const handleCreateActivity = (activity: IActivity) => {                   
+    setActivities([...activities, activity])     
+    setSelectedActivity(activity)           
+    setEditMode(false)                      
+  }                                                                         
+                                        
+  const handleEditActivity = (activity: IActivity) => {                     
+    setActivities([...activities.filter(a => a.id !== activity.id), activity])                                              
+    setSelectedActivity(activity)           
+    setEditMode(false)                      
+  }                                                                         
+                                                                            
   useEffect(() => {                                                                
     axios.get<IActivity[]>('http://localhost:5000/api/activities/')                       
       .then((response) => {                                                               
@@ -35,8 +47,10 @@ const App = () => {
             selectActivity={handleSelecteActivity}                                 
             selectedActivity={selectedActivity}                              
             editMode={editMode}                                              
-            setEditMode={setEditMode}               
-            setSelectedActivity={setSelectedActivity}
+            setEditMode={setEditMode}                                       
+            setSelectedActivity={setSelectedActivity}                   
+            createActivity={handleCreateActivity}                       
+            editActivity={handleEditActivity}                           
           />                                                                       
         </Container>                                                                      
       </Fragment>                                                                         
