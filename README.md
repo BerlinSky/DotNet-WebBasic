@@ -225,9 +225,38 @@ Updating API?program.cs: Seed.SeedData(Context)
                                                 
 1. Update the endpoint in client-app/.../App.tsx
 2. Update state to activities                 
-                                              
-## Add an Activity interface                  
-                                              
-1. Add a new "models" folder in src/app folder
-2. Add "activity.ts" in the models folder
-3. Add IState in activity.ts
+                                                          
+## Add an Activity interface                              
+                                                          
+1. Add a new "models" folder in src/app folder            
+2. Add "activity.ts" in the models folder                 
+3. Add IState in activity.ts                                
+                                                            
+## Refactor React Component to Hooks                        
+                                                            
+1. Update App.tsx to use React hooks                        
+2. Use "rafc" code snippet to create funcational component  
+3. Add NavBar.tsx                                           
+4. Add asets to the public/assets folder                    
+5. Update styles.css                                        
+6. Use React fragment as a wrapper                          
+7. Create ActivityDashboard.tsx: ActivityDashboard component
+8. Create ActivityList.tsx: ActivilityList component     
+                                                         
+## Create Activity Detail Component                      
+                                                         
+1. Add ActivityDetails.tsx                               
+2. Use semantic-ui Card component to style               
+3. Add ActivityDetails component to the ActivityDashboard
+                                                  
+## Create Activity Form                           
+                                                  
+## Add additional CRUD funcationalities           
+                                                  
+1. Select an individual activity                  
+2. Add an editMode to display Activity Form       
+3. Add a createActivity mode                      
+4. Enable the "Cancel" button on the Activity Form
+5. Initialize the form with data
+6. Submit the form             
+7. Add delete functionality    
