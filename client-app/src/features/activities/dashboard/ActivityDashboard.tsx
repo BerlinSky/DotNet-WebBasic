@@ -41,12 +41,14 @@ export const ActivityDashboard: React.FC<IProps> = ({
             />                                                                                  
           )}                                                                                                           
           {editMode && (                                                           
-            <ActivityForm                     
-              setEditMode={setEditMode}          
-              activity={selectedActivity!}       
-              createActivity={createActivity}    
-              editActivity={editActivity}        
-            />                                   
+            <ActivityForm                                   
+              // eslint-disable-next-line                   
+              key={selectedActivity && selectedActivity.id || 0}  
+              setEditMode={setEditMode}                           
+              activity={selectedActivity!}                        
+              createActivity={createActivity}                     
+              editActivity={editActivity}                         
+            />                                                    
           )}                                                                                  
         </Grid.Column>                                                                                                 
       </Grid>                                                                                                          
