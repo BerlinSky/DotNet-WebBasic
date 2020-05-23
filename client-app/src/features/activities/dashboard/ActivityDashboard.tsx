@@ -8,32 +8,38 @@ import { ActivityForm } from '../Form/ActivityForm'
 interface IProps {                                                                               
   activities: IActivity[];                                                                       
   selectActivity: (id: string) => void;                                                          
-  selectedActivity: IActivity | null;                      
-  editMode: boolean;                                       
-  setEditMode: (editMode: boolean) => void;                
+  selectedActivity: IActivity | null;                       
+  editMode: boolean;                                        
+  setEditMode: (editMode: boolean) => void;                 
+  setSelectedActivity: (activity: IActivity | null) => void;
 }                                                                                                
                                                                                                  
-export const ActivityDashboard: React.FC<IProps> = ({
-  activities,                                      
-  selectActivity,                                  
-  selectedActivity,                                
+export const ActivityDashboard: React.FC<IProps> = ({       
+  activities,                                               
+  selectActivity,                                           
+  selectedActivity,                                         
   editMode,                                                                                     
-  setEditMode                                                                                   
-}) => {                                                                                         
-  return (                                                                                       
-    <div>                                                                                        
-      <Grid>                                                                                     
-        <Grid.Column width={10}>                                                                 
-          <ActivityList activities={activities} selectActivity={selectActivity} />                             
-        </Grid.Column>                                                                           
-        <Grid.Column width={6}>                                                           
-          {selectedActivity && !editMode && (                                    
-            <ActivityDetails activity={selectedActivity} setEditMode={setEditMode}/> 
-          )}                                                                     
+  setEditMode,                                    
+  setSelectedActivity                                                                                                  
+}) => {                                                                                                                
+  return (                                                                                                             
+    <div>                                                                                                              
+      <Grid>                                                                                                           
+        <Grid.Column width={10}>                                                                                       
+          <ActivityList activities={activities} selectActivity={selectActivity} />                                     
+        </Grid.Column>                                                                                                 
+        <Grid.Column width={6}>                                                                                        
+          {selectedActivity && !editMode && (                                                                          
+            <ActivityDetails                          
+              activity={selectedActivity}             
+              setEditMode={setEditMode}               
+              setSelectedActivity={setSelectedActivity}
+            />                                        
+          )}                                                                                                           
           {editMode && <ActivityForm setEditMode={setEditMode} /> }                                                                                  
-        </Grid.Column>                                                                           
-      </Grid>                                                                                    
-    </div>                                                                                       
-  )                                                                                              
-}                                                                                                
-                                                                                                 
+        </Grid.Column>                                                                                                 
+      </Grid>                                                                                                          
+    </div>                                                                                                             
+  )                                                                                                                    
+}                                                                                                                      
+                                                                                                                       
