@@ -3,12 +3,14 @@ import { Container } from 'semantic-ui-react';
 import { IActivity } from '../models/activity';                    
 import { NavBar } from '../../features/nav/NavBar';                
 import { ActivityDashboard } from '../../features/activities/dashboard/ActivityDashboard';
-import agent from '../api/agent';
+import agent from '../api/agent';            
+import { LoadingComponent } from './LoadingComponent';
                                                                     
 const App = () => {                                                 
   const [activities, setActivities] = useState<IActivity[]>([]);    
   const [selectedActivity, setSelectedActivity] = useState<IActivity | null>(null);
-  const [editMode, setEditMode] = useState(false);                  
+  const [editMode, setEditMode] = useState(false);   
+  const [loading, setLoading] = useState(true)
                                                                                    
   const handleSelecteActivity = (id: string) => {                                  
     setSelectedActivity(activities.filter(a => a.id === id)[0]);   
@@ -29,7 +31,7 @@ const App = () => {
   }                                                                         
                                                                        
   const handleEditActivity = (activity: IActivity) => {   
-    agent.Activities.update(activity).then(() => {
+    agent.Activities.update(activity).then(() => {   
       setActivities([...activities.filter(a => a.id !== activity.id), activity])                                              
       setSelectedActivity(activity)                                      
       setEditMode(false)                                                 
@@ -52,9 +54,12 @@ const App = () => {
           activities.push(activity)                                    
         })                                                             
         setActivities(activities)                                                      
-      })                                                                                  
-  }, []);                                                                                 
-                                                                                          
+      })                                                          
+      .then(() => setLoading(false))                              
+    }, []);                                                                                 
+                                                                  
+    if (loading) return <LoadingComponent content='Loading ...' />
+                                                                  
     return (                                                                              
       <Fragment>                                                                          
         <NavBar openCreateForm={handleOpenCreateFrom} />                                                                        
