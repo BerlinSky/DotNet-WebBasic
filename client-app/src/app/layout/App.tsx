@@ -33,11 +33,13 @@ const App = () => {
       setActivities([...activities.filter(a => a.id !== activity.id), activity])                                              
       setSelectedActivity(activity)                                      
       setEditMode(false)                                                 
-    })                                         
+    })                                                     
   }                                                                    
                                                                        
-  const handleDeleteActivity = (id: string) => {                       
-    setActivities([...activities.filter(a => a.id !== id)])            
+  const handleDeleteActivity = (id: string) => {           
+    agent.Activities.delete(id).then(() => {               
+      setActivities([...activities.filter(a => a.id !== id)])            
+    })                                                     
   }                                                                    
                                                                             
   useEffect(() => {                                                                
