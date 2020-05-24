@@ -250,13 +250,27 @@ Updating API?program.cs: Seed.SeedData(Context)
 3. Add ActivityDetails component to the ActivityDashboard
                                                   
 ## Create Activity Form                           
-                                                  
-## Add additional CRUD funcationalities           
-                                                  
-1. Select an individual activity                  
-2. Add an editMode to display Activity Form       
-3. Add a createActivity mode                      
-4. Enable the "Cancel" button on the Activity Form
-5. Initialize the form with data
-6. Submit the form             
-7. Add delete functionality    
+                                                          
+## Add additional CRUD funcationalities                   
+                                                          
+1. Select an individual activity                          
+2. Add an editMode to display Activity Form               
+3. Add a createActivity mode                                                
+4. Enable the "Cancel" button on the Activity Form                          
+5. Initialize the form with data                                            
+6. Submit the form                                                          
+7. Add delete functionality                                                 
+                                                                            
+## Utilizing Axios                                                          
+                                                                            
+1. Encapsulate Axios related login a an agent.ts file                      
+2. Add some delay in the client applicaiton to simulate the server response
+3. Add a loading indicator to UI                          
+4. Reset the database for the next phase                  
+                                                          
+```bash                                                   
+> cd reactactivities                                      
+> dotnet ef database frop -p Persistence/ -s API/         
+> cd API                                                  
+> dotnet watch run ## Reseed the database at the startup  
+```                                                       
