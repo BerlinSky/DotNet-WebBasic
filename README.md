@@ -274,3 +274,32 @@ Updating API?program.cs: Seed.SeedData(Context)
 > cd API                                                  
 > dotnet watch run ## Reseed the database at the startup  
 ```                                                       
+                              
+## Utilizing MobX          
+                                             
+### MobX is a stateful                       
+                                             
+### Mobx has only 4 objects                  
+                                              
+1. Oservable                                  
+2. Action                                     
+3. Computed                                   
+4. Reaction                                   
+                                              
+### Wrap React component with observer        
+                                              
+### Install MobX libs                         
+                                                                                
+```bash                                                                         
+> npm i -S mobx mobx -react-lite                                                
+```                                                                             
+                                                                                
+### Key steps of using MobX                                                     
+                                                                                
+1. Create an activitySotre under app/stores/                                    
+2. Use decorator methods                                                        
+3. Pass components into overserv()                                              
+4. Replace data loading logic in useEffect() with the those in the ActivityStore
+5. Use @computed method as needed                        
+6. Use Observale Map instead of array for the activities 
+                                                                                
