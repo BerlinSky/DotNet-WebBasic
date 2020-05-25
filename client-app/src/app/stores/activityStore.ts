@@ -4,10 +4,10 @@ import { createContext } from 'react';
 import agent from '../api/agent';                                       
                                                                         
 class ActivityStore {                                                   
-  @observable activities: IActivity[] = [];   
-  @observable selectedActivity: IActivity | undefined;
-  @observable loadingInitial = false;                  
-  @observable editMode = false;                        
+  @observable activities: IActivity[] = [];                             
+  @observable selectedActivity: IActivity | undefined;                  
+  @observable loadingInitial = false;                                   
+  @observable editMode = false;                                         
                                                                         
   @action loadActivities = () => {                                      
     this.loadingInitial = true;                                         
@@ -21,12 +21,12 @@ class ActivityStore {
         })                                                              
       })                                                                
       .finally(() => this.loadingInitial = false);                      
-  }                                                                  
-                                                                     
+  }                                                                     
+                                                                        
   @action selectActivity = (id: string) => {                            
-    this.selectedActivity = this.activities.find(a => a.id === id);
-    this.editMode = false;
-  }                                                                  
+    this.selectedActivity = this.activities.find(a => a.id === id);     
+    this.editMode = false;                                              
+  }                                                                     
                                                                         
 }                                                                       
                                                                         

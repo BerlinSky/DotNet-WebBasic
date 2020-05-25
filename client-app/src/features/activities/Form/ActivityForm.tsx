@@ -74,8 +74,8 @@ export const ActivityForm: React.FC<IProps> = ({
         />                                                     
         <Form.Input onChange={handleInputChange} name='city'  placeholder='City' value={activity.city} />                                              
         <Form.Input onChange={handleInputChange} name='venue'  placeholder='Venue' value={activity.venue} />                                             
-        <Button              
-          loading={submitting}  
+        <Button                    
+          loading={submitting}     
           floated='right'                  
           positive type='submit'           
           content='Submit'                 
