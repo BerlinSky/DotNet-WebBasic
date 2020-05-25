@@ -73,12 +73,12 @@ class ActivityStore {
                                        
     try {                              
       await agent.Activities.delete(id)
-      this.activityRegistry.delete(id)
-      this.submitting = false
-      this.target = ''    
+      this.activityRegistry.delete(id) 
+      this.submitting = false          
+      this.target = ''                 
     } catch (error) {                  
-      this.submitting = false
-      this.target = ''    
+      this.submitting = false          
+      this.target = ''                 
       console.log(error);                                                         
     }                                  
   }                                                                               
