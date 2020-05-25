@@ -2,22 +2,22 @@ import React, { SyntheticEvent, useContext } from 'react'
 import { Item, Button, Label, Segment } from 'semantic-ui-react'                    
 import { observer } from 'mobx-react-lite'     
 import ActivityStore from '../../../app/stores/activityStore'                                          
-                                                      
-interface IProps {                                    
+                                                               
+interface IProps {                                             
   deleteActivity: (e: SyntheticEvent<HTMLButtonElement>, id: string) => void;          
-  submitting: boolean;                                
-  target: string;                                     
-}                                                                  
-                                                                   
-const ActivityList: React.FC<IProps> = ({                                    
+  submitting: boolean;                                                                 
+  target: string;                                                                      
+}                                                                                      
+                                                                                       
+const ActivityList: React.FC<IProps> = ({                                              
   deleteActivity,                                                                          
   submitting,                                                                              
   target                                                                                   
-}) => {                                                                             
-                                                                                    
-  const activityStore = useContext(ActivityStore)                                   
-  const { activities, selectActivity } = activityStore                              
-                                                                                    
+}) => {                                                                                
+                                                                                       
+  const activityStore = useContext(ActivityStore)                                      
+  const { activities, selectActivity } = activityStore                                 
+                                                                                       
   return (                                                                                 
     <Segment clearing>                                                                     
       <Item.Group divided>                                                                 
