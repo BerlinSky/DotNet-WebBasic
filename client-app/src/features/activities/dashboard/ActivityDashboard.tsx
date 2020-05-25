@@ -4,13 +4,12 @@ import { IActivity } from '../../../app/models/activity'
 import ActivityList from './ActivityList'                                                    
 import ActivityDetails from '../details/ActivityDetails'                                     
 import ActivityForm from '../Form/ActivityForm'                                              
-import { observer } from 'mobx-react-lite'
+import { observer } from 'mobx-react-lite'       
 import ActivityStore from '../../../app/stores/activityStore'
                                                                                                  
 interface IProps {                                                                               
   setEditMode: (editMode: boolean) => void;                  
   setSelectedActivity: (activity: IActivity | null) => void; 
-  createActivity: (activity: IActivity) => void;             
   editActivity: (activity: IActivity) => void;               
   deleteActivity: (e: SyntheticEvent<HTMLButtonElement>, id: string) => void;
   submitting: boolean;                                       
@@ -20,7 +19,6 @@ interface IProps {
 const ActivityDashboard: React.FC<IProps> = ({              
   setEditMode,                                               
   setSelectedActivity,                                       
-  createActivity,                                            
   editActivity,                                              
   deleteActivity,                                            
   submitting,                                                
